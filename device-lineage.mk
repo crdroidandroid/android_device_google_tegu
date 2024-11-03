@@ -25,6 +25,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Iwlan
 
+# Pixel Parts
+$(call inherit-product-if-exists, packages/apps/PixelParts/device.mk)
+
 # wireless_charger HAL service
 include device/google/gs-common/wireless_charger/wireless_charger.mk
 
