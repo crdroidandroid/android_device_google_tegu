@@ -34,6 +34,14 @@ PRODUCT_PACKAGES += \
 # Pixel Parts
 $(call inherit-product-if-exists, packages/apps/PixelParts/device.mk)
 
+# Set support hide display cutout feature
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay \
+    AvoidAppsInCutoutOverlay
+
 # wireless_charger HAL service
 include device/google/gs-common/wireless_charger/wireless_charger.mk
 
